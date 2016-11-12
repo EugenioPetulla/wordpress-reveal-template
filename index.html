@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+	<title>WordPress Template: reveal.js for public speaking</title>
+	<link rel="stylesheet" type="text/css" href="css/reveal.min.css">
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/darcula.css">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700" rel="stylesheet"> 
+</head>
+<body>
+	<div class="wplogo"><img src="assets/wplogo.png"></div>
+	<div class="reveal">
+        <div class="slides">
+            <section id="slide-1">
+            	<img src="images/wp-logo.png" width="350" height="350" class="white">
+            	<h1>WordPress Template</h1>
+            	<h3>reveal.js for public speaking</h3>
+            </section>
+            <section id="slide-2">
+                <section>
+                    <h1>Vertical Slide</h1>   
+                </section>
+                <section>
+                    <h1>Vertical slide 2</h1>
+                </section>
+            </section>
+            <section id="slide-3">
+                <h1>Bullet point</h1>
+                <ul>
+                    <p class="fragment grow">Point One</p>
+                    <p class="fragment grow">Point Two</p>
+                    <p class="fragment grow">Point Three</p>
+                    <p class="fragment grow">Point Four</p>
+                </ul>
+            </section>
+            <section id="slide-4">
+                <img src="images/alternative-bg.png">
+                <h1>Content Image</h1>
+            </section>
+            <section id="slide-5" data-background-image="images/alternative-bg.png">
+                <h1>Full Screen Image</h1>
+            </section>
+            <section id="slide-6" data-background-video="videos/Meet_Encryption.webm">
+                <h1>Full Screen Video</h1>
+            </section>
+            <section id="slide-7">
+                <section>
+                    <h1>CSS Code</h1>
+                    <pre><code class="hljs css">
+                    .my-class {
+                        text-align: center;
+                    }
+
+                    #my-id {
+                        font-size: 1.5em;
+                    }
+                    </code></pre>
+                </section>
+                <section>
+                    <h1>HTML Code</h1>
+                    <pre><code class="hljs html">
+            <div class="my-class">
+                <h1>Title</h1>
+                <h2>Subtitle</h2>
+                <p>Text paragraph</p>
+                <ul id="my-id">
+                    <li>Element One</li>
+                    <li>Element Two</li>
+                    <li>Element Three</li>
+                </ul>
+            </div>
+                    </code></pre>
+                </section>
+                <section>
+                    <h1>Rust Code</h1>
+                    <pre><code class="hljs rust">
+        fn main() {
+            // The statements here will
+            // be executed when the compiled
+            //binary is called
+
+            // Print text to the console
+            println!("Hello World!");
+        }
+                    </code></pre>
+                </section>
+        </section>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/reveal.js"></script>
+    <script type="text/javascript" src="js/head.min.js"></script>
+	<script>
+        Reveal.initialize({
+                history: true,
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    //{ src: 'plugin/markdown/marked.js' },
+                    //{ src: 'plugin/markdown/markdown.js' },
+                    //{ src: 'plugin/notes/notes.js', async: true },
+                    {src: 'plugin/highlight/highlight.js', async: true, condition: function () {
+                    return !!document.querySelector('pre code');
+                  }, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                  }}
+                ]
+            });
+    </script>
+</body>
+</html>
